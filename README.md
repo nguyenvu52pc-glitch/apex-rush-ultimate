@@ -1,6 +1,15 @@
 # Apex Rush: Ultimate
 
-A 100% procedural 3D browser racing game built with **Three.js (`0.187.0`)**, **cannon-es (`0.20.0`)**, and **Vite ES Modules**. Every vehicle, interior, branching tree, serrated leaf card, circuit ribbon, sky dome, and Web Audio synthesizer sound is generated strictly in code with zero external media downloads.
+> **Live Playable Demo:** https://apex-rush-ultimate-3d.netlify.app
+
+A 100% procedural 3D browser racing game built with **Three.js (`0.187.0`)**, **cannon-es (`0.20.0`)**, and **Vite ES Modules** — designed as an accessible, zero-download **"Horizon-lite" racing experience** for mainstream and mid-range laptops. Every vehicle, interior, branching tree, serrated leaf card, circuit ribbon, sky dome, and Web Audio synthesizer sound is generated strictly in code with zero external media downloads.
+
+---
+
+## Roadmap (Next Engineering Milestones)
+
+1. **Realtime Multiplayer Room & State Sync (WebSocket + Snapshot Interpolation):** Room code lobby (up to 8 players matching `RACER_COUNT`), synced `GARAGE -> COUNTDOWN -> RACING -> FINISHED` state machine in `src/gameplay/RaceManager.js`, 20Hz state snapshots from `src/physics/VehiclePhysics.js`, and 100ms interpolation buffer for remote vehicles.
+2. **Automated 3-Preset Performance Benchmark:** Headless Playwright benchmark covering `medium`, `high`, and `ultra` presets in `src/core/QualityManager.js` (P95 frame time, draw calls, GPU memory, and 35 FPS Watchdog verification) to keep gameplay smooth on integrated GPUs and mid-range laptops.
 
 ---
 
